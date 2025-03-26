@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Voting</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Click an Image to Vote</h1>
+    <div class="image-container">
+        <img src="download.jpeg" onclick="openModal(this.src)">
+        <img src="download.webp" onclick="openModal(this.src)">
+        <img src="images.webp" onclick="openModal(this.src)">
+    </div>
+
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" style="width: 100%; max-width: 300px;">
+            <p>Vote for this image:</p>
+            <input type="number" id="voteCount" min="1" max="100" placeholder="Enter votes">
+            <button onclick="submitVote()">Submit</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
